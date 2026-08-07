@@ -1,0 +1,10 @@
+kagglehub
+pandas
+Jupyter
+ipywidgets
+scikit-learn
+Pillow
+matplotlib
+numpy
+tensorflow
+seaborn

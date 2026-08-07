@@ -86,24 +86,24 @@ To run the prediction pipeline properly, follow these steps:
 
 1. Download the .keras CNN model file included in this repository.
 
-2. Download the selected Chinese traffic sign images you would like to make predictions on (either from this repository, or from elsewhere) and put them into one directory. An example is shown below.
+2. Download the selected Chinese traffic sign images you would like to make predictions on (from Kaggle or elsewhere) and put them into one directory. An example is shown below.
 
-![Step 2 Example](media/run_prediction_pipeline_step_2_example.png)
+<img src="media/run_prediction_pipeline_step_2_example.png" width="450">
 
 3. Download `Chinese_Traffic_Sign_Predictor.py` and optionally `chinese_traffic_sign_predictor.sh`, as well as `labels.py` and place them all in one directory.
 
-4. Run either `python3` `/path/to/Chinese_Traffic_Sign_Predictor.py` `/path/to/model` `/path/to/image_directory/*.png`,
+4. Run either `python3 /path/to/Chinese_Traffic_Sign_Predictor.py /path/to/model /path/to/image_directory/*.png`,
 
 OR
 
-`bash` `/path/to/chinese_traffic_sign_predictor.sh` `/path/to/model` `/path/to/image_directory/*.png`. You will receive a `matplotlib.pyplot` pop-up window that contains each traffic sign image that you provided, the predicted class, and a confidence level. Use the arrow keys on your keyboard to shift between signs that you provided. An example is shown below.
+`bash /path/to/chinese_traffic_sign_predictor.sh /path/to/model /path/to/image_directory/*.png`. You will receive a `matplotlib.pyplot` pop-up window that contains each traffic sign image that you provided, the predicted class, and a confidence level. Use the arrow keys on your keyboard to shift between signs that you provided. An example is shown below.
 
 ![Step 4 Pop-up Loading Example](media/run_prediction_pipeline_step_4_load_pop_up_example.png)
 
 Loading the pop-up (above).
 
-![Step 4 Prediction Example 1](media/run_prediction_pipeline_step_4_prediction_example_1.png)
+<img src="media/run_prediction_pipeline_step_4_prediction_example_1.png" width="400">
 
-![Step 4 Prediction Example 2](media/run_prediction_pipeline_step_4_prediction_example_2.png)
+<img src="media/run_prediction_pipeline_step_4_prediction_example_2.png" width="400">
 
 Results appear in the pop-up as shown above.

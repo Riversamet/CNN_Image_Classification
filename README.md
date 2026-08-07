@@ -98,12 +98,18 @@ OR
 
 `bash /path/to/chinese_traffic_sign_predictor.sh /path/to/model /path/to/image_directory/*.png`. You will receive a `matplotlib.pyplot` pop-up window that contains each traffic sign image that you provided, the predicted class, and a confidence level. Use the arrow keys on your keyboard to shift between signs that you provided. An example is shown below.
 
+Loading the pop-up (below).
+
+
+
 ![Step 4 Pop-up Loading Example](media/run_prediction_pipeline_step_4_load_pop_up_example.png)
 
-Loading the pop-up (above).
+
+
+Results appear in the pop-up as shown below.
+
+
 
 <img src="media/run_prediction_pipeline_step_4_prediction_example_1.png" width="400">
 
 <img src="media/run_prediction_pipeline_step_4_prediction_example_2.png" width="400">
-
-Results appear in the pop-up as shown above.

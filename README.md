@@ -19,7 +19,7 @@ This project explores the use of convolutional neural networks (CNNs) to classif
 - ipywidgets
 - scikit-learn
 - PIL
-- matplotlib
+- Matplotlib
 - NumPy
 - TensorFlow
 - seaborn
@@ -41,7 +41,7 @@ A ~70/15/15 split was used for this project. Stratification is used across split
 The typical shape of an image object for CNN training is (`image_width`, `image_height`, `number_of_color_channels`). 
 
 - Three color channels are created using `RGB`
-- Images are resized to 32x32
+- Images are resized to 32x32 (then upsampled to 96×96 for the MobileNetV2 models; this is the smallest input Keras' MobileNetV2 accepts)
 - Image object color ranges are normalized so that they range from 0 to 1
 
 ### 3. Building, training, and evaluating CNNs
@@ -52,7 +52,7 @@ CNNs are used specifically for this image classification project because of thei
 
 Four different CNNs are built, trained, and evaluated in this project. The first two consist of three convolutional layers with a pooling layer after each, flattening to reshape the final hidden layer to one dimension, a dense layer for final classification, and a softmax activation function in the dense layer to provide probabilities of sign type for each image by the model.
 
-One of these CNNs also contains data augmentation for the training set.
+One of these CNNs also applies data augmentation to the training set: random rotation (±0.08 of a turn, about ±29°), zoom (10%), contrast (20%), and translation (up to 20% in each direction).
 
 The other two CNNs are based on Google's MobileNetV2 (MNV2) available directly from TensorFlow. One is simply the base model with no trainable parameters, followed by global pooling and a final dense layer for classification, and the other has the same structure but with the final 10 layers being trainable.
 
@@ -68,7 +68,7 @@ Each model's performance is evaluated based on predictions on the validation and
 
 Overall, the basic CNN model had validation and test set prediction accuracies of 95% and 96%, respectively, the model using augmented training data had accuracies of 68%, MNV2 with no trainable parameters in the base model had accuracies of 98%, and MNV2 with trainable parameters in the base model had accuracies of 98%. 
 
-The poor performance of the model with augmented training data is likely due to minimal overfitting in the original model, which means that clouding the already-strong training signal with augmented data only lowers accuracy. 
+The poor performance of the model with augmented training data is likely due to the minimal overfitting and strong performance of the original model, which means that clouding the already-strong training signal with augmented data only lowers accuracy. 
 
 All other models had consistent and high recall, precision, and F1 scores across the board, with confusion matrices that showed near-perfect diagonals. All of this indicates that there was not a specific category of sign that confused models, but any inaccuracy by the model was generally distributed smoothly across multiple sign categories.
 

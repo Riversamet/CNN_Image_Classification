@@ -41,7 +41,7 @@ A ~70/15/15 split was used for this project. Stratification is used across split
 The typical shape of an image object for CNN training is (`image_width`, `image_height`, `number_of_color_channels`). 
 
 - Three color channels are created using `RGB`
-- Images are resized to 32x32 (then upsampled to 96×96 for the MobileNetV2 models; this is the smallest input Keras' MobileNetV2 accepts)
+- Images are resized to 32x32 (then upsampled to 96x96 for the MobileNetV2 models; this is the smallest input Keras' MobileNetV2 accepts)
 - Image object color ranges are normalized so that they range from 0 to 1
 
 ### 3. Building, training, and evaluating CNNs
